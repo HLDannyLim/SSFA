@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+    <title>Order Delivery Details</title>
+</head>
+<body>
+    <h1>Order Delivery Details</h1>
+
+    <form method="post" data-th-action="@{/contact}" 
+    action="#" data-th-object="${contact}">
+    <label>Name:</label>
+    <input type="text" data-th-field="*{name}"/>
+    <span class="error" data-th-if="${#fields.hasErrors('name')}"data-th-errors="*{name}"></span>
+    <br>
+    <label>Address:</label>
+    <input type="text" data-th-field="*{address}"/>
+    <span class="error" data-th-if="${#fields.hasErrors('address')}"data-th-errors="*{address}"></span>
+    <br>
+    <label>Phone:</label>
+    <input type="text" data-th-field="*{phone}"/>
+    <span class="error" data-th-if="${#fields.hasErrors('phone')}"data-th-errors="*{phone}"></span>
+    <br>
+    <label>Rush:</label>
+    <input type="checkbox" name="Rush" th:checked="${rush}" />
+    <br>
+
+    <label>Comments</label>
+    <input type="text" data-th-field="*{comment}"/>
+    <br>
+    <!-- <input type="submit" value="Cancel Order"> -->
+    <input type="submit" value="Place Order">
+    </form>
+
+</body>
+</html>
