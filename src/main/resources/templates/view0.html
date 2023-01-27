@@ -17,20 +17,50 @@
     <img src="C:/Users/lim_d/src/pizza/src/main/resources/static/images/logo.jpg" width="1000" data-th-src="@{images/logo.jpg}"/>
     <img src="C:\Users\lim_d\src\pizza\src\main\resources\static\images\Bella.png" width="1000" th:src="@{images/Bella.png}"/>
     <img th:src="@{images/Bella.png}" /> -->
-    <img src="images\logo.jpg" width="200" height="200"/>
-    <h1>Panucci's Pizza</h1>
+    <table>
+        <tr>
+          <th><img src="images\logo.jpg" width="150" height="150"/></th>
+          <th><h1>Panucci's Pizza</h1></th>
+        </tr>
+    </table>
     <h2>Select a pizza</h2>
-    <img src="images\Bella.png" width="200" height="200"/>
-    <img src="images\Margherita.png" width="200" height="200"/>
-    <img src="images\Marinara.png" width="200" height="200"/>
-    <img src="images\SpianataCalabrese.png" width="200" height="200"/>
-    <img src="images\TrioFormaggio.png" width="200" height="200"/>
+
     <br>
     <form method="post" data-th-action="@{/}" 
     action="#" data-th-object="${pizza}">
 
+    <table>
+        <tr>
+          <th><img src="images\Bella.png" width="200" height="200"/></th>
+          <th><img src="images\Margherita.png" width="200" height="200"/></th>
+          <th><img src="images\Marinara.png" width="200" height="200"/></th>
+          <th><img src="images\SpianataCalabrese.png" width="200" height="200"/></th>
+          <th><img src="images\TrioFormaggio.png" width="200" height="200"/></th>
+        </tr>
+        <tr>
+          <td>        <input type="radio" id="Bella" name="Bella"  value="bella" data-th-field="*{pizza}">
+            <label for="Bella">Bella</label></td>
+          <td>        <input type="radio" id="Margherita" name="Margherita"  value="margherita" data-th-field="*{pizza}">
+            <label for="Margherita">Margherita</label></td>
+          <td>        <input type="radio" id="Marinara" name="Marinara"  value="marinara" data-th-field="*{pizza}">
+            <label for="Marinara">Marinara</label></td>
+            <td>
+                <input type="radio" id="SpianataCalabrese" name="SpianataCalabrese"  value="spianataCalabrese" data-th-field="*{pizza}">
+                <label for="SpianataCalabrese">SpianataCalabrese</label>
+        
+            </td>
+            <td>
+                <input type="radio" id="TrioFormaggio" name="TrioFormaggio"  value="trioFormaggio" data-th-field="*{pizza}">
+                <label for="TrioFormaggio">TrioFormaggio</label>        
+            </td>
+            <td>
+                <span class="error" data-th-if="${#fields.hasErrors('pizza')}"data-th-errors="*{pizza}"></span>
+            </td>
+        </tr>
+    </table>
 
-        <input type="radio" id="Bella" name="Bella"  value="bella" data-th-field="*{pizza}">
+
+        <!-- <input type="radio" id="Bella" name="Bella"  value="bella" data-th-field="*{pizza}">
         <label for="Bella">Bella</label>
         <input type="radio" id="Margherita" name="Margherita"  value="margherita" data-th-field="*{pizza}">
         <label for="Margherita">Margherita</label>
@@ -40,7 +70,7 @@
         <label for="SpianataCalabrese">SpianataCalabrese</label>
         <input type="radio" id="TrioFormaggio" name="TrioFormaggio"  value="trioFormaggio" data-th-field="*{pizza}">
         <label for="TrioFormaggio">TrioFormaggio</label>
-        <span class="error" data-th-if="${#fields.hasErrors('pizza')}"data-th-errors="*{pizza}"></span>
+        <span class="error" data-th-if="${#fields.hasErrors('pizza')}"data-th-errors="*{pizza}"></span> -->
 
         <!-- <input type="radio" data-th-field="*{quantity}">
         <label for="Margherita">Margherita</label>

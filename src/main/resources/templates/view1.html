@@ -16,6 +16,7 @@
 
     <form method="post" data-th-action="@{/contact}" 
     action="#" data-th-object="${contact}">
+    
     <label>Name:</label>
     <input type="text" data-th-field="*{name}"/>
     <span class="error" data-th-if="${#fields.hasErrors('name')}"data-th-errors="*{name}"></span>

@@ -18,6 +18,7 @@
     <img src="C:\Users\lim_d\src\pizza\src\main\resources\static\images\Bella.png" width="1000" th:src="@{images/Bella.png}"/>
     <img th:src="@{images/Bella.png}" /> -->
     <img src="images\logo.jpg" width="200" height="200"/>
+
     <h1>Panucci's Pizza</h1>
     <h2>Select a pizza</h2>
     <img src="images\Bella.png" width="200" height="200"/>
@@ -28,6 +29,7 @@
     <br>
     <form method="post" data-th-action="@{/}" 
     action="#" data-th-object="${pizza}">
+
 
 
         <input type="radio" id="Bella" name="Bella"  value="bella" data-th-field="*{pizza}">
